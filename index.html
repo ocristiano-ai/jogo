@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Horizontes - Aventura Motivacional</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>✦ HORIZONTES</h1>
+    <p>AVENTURA MOTIVACIONAL</p>
+  </header>
+
+  <main>
+    <section id="menu" class="panel">
+      <h2>O próximo passo é seu!</h2>
+      <p>15 mundos, desafios e conquistas.</p>
+
+      <label for="nome">Nome do aventureiro</label>
+      <input id="nome" maxlength="20"
+        placeholder="Digite seu nome">
+
+      <h3>Escolha seu personagem</h3>
+      <div id="avatares"></div>
+
+      <button id="iniciar" class="principal">
+        COMEÇAR A AVENTURA
+      </button>
+    </section>
+
+    <section id="jogo" class="escondido">
+      <div class="painel">
+        <div>
+          <h2 id="mundo"></h2>
+          <p id="objetivo"></p>
+        </div>
+        <div id="pontos"></div>
+      </div>
+
+      <canvas id="tela" width="900" height="500">
+      </canvas>
+
+      <div class="controles">
+        <button data-controle="left">◀</button>
+        <button data-controle="up">▲ PULAR</button>
+        <button data-controle="down">▼</button>
+        <button data-controle="right">▶</button>
+        <button id="pausar">⏸ PAUSAR</button>
+      </div>
+    </section>
+  </main>
+
+  <div id="modal" class="escondido">
+    <div class="janela">
+      <h2 id="tituloModal"></h2>
+      <p id="textoModal"></p>
+      <div id="respostas"></div>
+      <button id="continuar" class="principal">
+        CONTINUAR
+      </button>
+    </div>
+  </div>
+
+  <footer>
+    HORIZONTES • Coragem • Persistência • Superação
+  </footer>
+
+  <script src="game.js"></script>
+</body>
+</html>
